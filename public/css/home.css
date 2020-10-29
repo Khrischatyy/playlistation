@@ -1,0 +1,319 @@
+@font-face {
+  font-family: "impact";
+  font-display: swap;
+  src: url("../fonts/impact.eot");
+  src: local("O"), url("../fonts/impact.woff") format("woff"),
+    url("../fonts/impact.ttf") format("truetype"),
+    url("../fonts/impact.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.main-line {
+  display: none;
+}
+.loader > img {
+  animation: 2s spin infinite linear;
+}
+.loader {
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 100;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes spin {
+  0% {
+  transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+.done {
+  opacity: 0;
+  visibility: hidden;
+}
+body {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: impact;
+  text-decoration: none;
+  font-size: calc(4vw + 1.5em);
+  cursor: pointer;
+}
+
+.navigation {
+  background-image: url(../images/lambert.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+.copy {
+  position: absolute;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  pointer-events: none;
+}
+
+.copy > .copy_a {
+  position: relative;
+  z-index: 2;
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: impact;
+  text-decoration: none;
+  font-size: calc(4vw + 1.5em);
+}
+
+.copy_left {
+  left: 0;
+  top: -11px;
+  opacity: 0;
+  -webkit-clip-path: polygon(
+    40% 10%,
+    90% 40%,
+    95% 50%,
+    90% 60%,
+    10% 60%,
+    5% 50%
+  );
+  clip-path: polygon(30% 30%, 90% 40%, 95% 50%, 90% 70%, 10% 60%, 5% 50%);
+}
+
+.copy_left:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 200%;
+  top: 11px;
+  height: 100%;
+  background-image: url(../images/lambert.jpg);
+  background-size: cover;
+}
+
+.copy_right {
+  top: -11px;
+  right: 0;
+  opacity: 0;
+  -webkit-clip-path: polygon(30% 33%, 94% 42%, 84% 65%, 33% 61%, 4% 66%, 0 43%);
+  clip-path: polygon(30% 33%, 94% 42%, 84% 65%, 33% 61%, 4% 66%, 0 43%);
+}
+
+.copy_right:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 200%;
+  top: 11px;
+  height: 100%;
+  background-image: url(../images/lambert.jpg);
+  background-size: cover;
+}
+
+.left-side {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.left-side:hover + .copy_left {
+  opacity: 1;
+}
+
+.right-side {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.right-side:hover + .copy_right {
+  opacity: 1;
+}
+.left-link {
+  display: none;
+}
+.header-menu-link-item > a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 767px) {
+  .main-line {
+    display: block;
+  }
+  .left-link {
+    display: block;
+  }
+  .hide-left-link {
+    display: none;
+  }
+
+  .main-line {
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    width: 200px;
+  }
+  .navigation {
+    background-image: url(../images/lambert.jpg);
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+  }
+  .copy {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    pointer-events: none;
+  }
+  .copy_left {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: -50px;
+    opacity: 0;
+    -webkit-clip-path: polygon(
+      40% 10%,
+      90% 40%,
+      95% 50%,
+      90% 60%,
+      10% 60%,
+      5% 50%
+    );
+    clip-path: polygon(30% 30%, 90% 40%, 95% 50%, 90% 70%, 10% 60%, 5% 50%);
+  }
+  .copy > .copy_a {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: impact;
+    text-decoration: none;
+    font-size: calc(4vw + 3em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .copy_left:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50px;
+    height: 100%;
+    background-image: url(../images/lambert.jpg);
+    background-size: cover;
+    z-index: 1;
+  }
+  .left-side {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .left-side:hover + .copy_left {
+    opacity: 1;
+  }
+
+  .copy_right {
+    top: 87px;
+    right: 0;
+    opacity: 0;
+    -webkit-clip-path: polygon(40% 36%, 87% 41%, 76% 60%, 17% 63%, 8% 44%);
+    clip-path: polygon(40% 36%, 87% 41%, 76% 60%, 17% 63%, 8% 44%);
+  }
+
+  .copy_right:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: -87px;
+    height: 100%;
+    background-image: url(../images/lambert.jpg);
+    background-size: cover;
+  }
+
+  .right-side {
+    position: relative;
+    width: 50%;
+    text-align: center;
+  }
+
+  .right-side:hover + .copy_right {
+    opacity: 1;
+  }
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: impact;
+    text-decoration: none;
+    font-size: calc(4vw + 3em);
+  }
+}
