@@ -681,10 +681,9 @@ z-index: 50;
 /******************************************ARTISTS*******************************************/
 
 .image > a > img {
-	max-width: 100%;
-	filter: grayscale(100%)  contrast(112%) brightness(93%);
-
-}
+		max-width: 200px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
 .image > a > img:hover {
 	filter: grayscale(0%);
 	transform: translate(0, -10%);
@@ -717,166 +716,87 @@ z-index: 50;
 
 .artist-name > a {
 	font-family: Brightland;
-	font-size: 3em;
+	font-size: 2.7em;
 	font-weight: 400;
 	text-decoration: none;
 	color: black;
 	text-shadow: white 1px 2px 0, white -1px -2px 0, 
                  white 0px 0px 0, white 0px 0px 0;
 }
-@media(max-width: 767px) {
-	.artist-item {
-	padding: 0px 3px 0px 3px;
-}
-	.image > a > img {
-	max-width: 200px;
-	filter: grayscale(100%);
-
-}
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
-
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 2em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
-@media(max-width: 616px) {
+@media(max-width: 1066px) { 
 		.image > a > img {
-	max-width: 170px;
-	filter: grayscale(100%);
-
+		max-width: 180px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 2.5em;
+	}
 }
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
-
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 1.7em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
-@media(max-width: 526px) {
+@media(max-width: 1066px) { 
 		.image > a > img {
-	max-width: 150px;
-	filter: grayscale(100%);
-
+		max-width: 180px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 2.5em;
+	}
 }
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
-
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 1.7em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
-@media(max-width: 466px) {
+@media(max-width: 777px) { 
 		.image > a > img {
-	max-width: 130px;
-	filter: grayscale(100%);
-
+		max-width: 160px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 2.5em;
+	}
 }
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
-
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 1.4em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
-@media(max-width: 406px) {
+@media(max-width: 526px) { 
 		.image > a > img {
-	max-width: 120px;
-	filter: grayscale(100%);
-
+		max-width: 130px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 2.2em;
+	}
 }
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
-
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 1.3em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
-@media(max-width: 376px) {
+@media(max-width: 437px) { 
 		.image > a > img {
-	max-width: 100px;
-	filter: grayscale(100%);
+		max-width: 110px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 1.7em;
+	}
+}
+@media(max-width: 376px) { 
+		.image > a > img {
+		max-width: 100px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 1.5em;
+	}
+}
+@media(max-width: 347px) { 
+		.image > a > img {
+		max-width: 80px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 1.1em;
+	}
+}
+@media(max-width: 286px) { 
+		.image > a > img {
+		max-width: 60px;
+		filter: grayscale(100%)  contrast(112%) brightness(93%);
+	}
+	.artist-name > a {
+		font-size: 0.8em;
+	}
+}
 
-}
-	.image > a > img:hover {
-	filter: grayscale(0%);
-	transform: translate(0, -10%);
-	transition: 0.35s;
-}
 
-.artist-name > a {
-	font-family: Brightland;
-	font-size: 1.1em;
-	font-weight: 400;
-	text-decoration: none;
-	color: black;
-}
-.artist-name {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-}
 /*******************************************************************************************/
 
 /******************************************ARTIST*******************************************/
