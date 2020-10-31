@@ -257,7 +257,7 @@ a {
     color: rgba(255, 255, 255, 0.75);
     font-family: impact;
     text-decoration: none;
-    font-size: calc(3vw + 3.5em);
+    font-size: calc(3.5vw + 3.5em);
     display: flex;
     flex-direction: column;
     justify-content: center;
