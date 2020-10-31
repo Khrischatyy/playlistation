@@ -180,22 +180,25 @@ a {
 .right-side:hover + .copy_right {
   opacity: 1;
 }
-.left-link {
-  display: none;
-}
+
 .header-menu-link-item > a {
   text-decoration: none;
   color: white;
 }
+.main-text {
+  display: none;
+}
 @media (max-width: 767px) {
+  .main-text {
+    display: block;
+    position: relative;
+    color: rgba(255,255,255,0.8);
+    padding-top: 30px;
+    font-family: impact;
+    font-size: 20px;
+  }
   .main-line {
     display: block;
-  }
-  .left-link {
-    display: block;
-  }
-  .hide-left-link {
-    display: none;
   }
 
   .main-line {
@@ -234,10 +237,11 @@ a {
     pointer-events: none;
   }
   .copy_left {
+    text-align: center;
     position: absolute;
     z-index: 1;
-    left: 0px;
-    top: -50px;
+    left: 0;
+    top: -76px;
     opacity: 0;
     -webkit-clip-path: polygon(
       40% 10%,
@@ -247,18 +251,17 @@ a {
       10% 60%,
       5% 50%
     );
-    clip-path: polygon(30% 30%, 90% 40%, 95% 50%, 90% 70%, 10% 60%, 5% 50%);
+    clip-path: polygon(46% 36%, 76% 33%, 96% 40%, 90% 58%, 72% 61%, 46% 61%, 25% 64%, 10% 60%, 3% 43%, 19% 35%);
   }
   .copy > .copy_a {
     color: rgba(255, 255, 255, 0.75);
     font-family: impact;
     text-decoration: none;
-    font-size: calc(4vw + 3em);
+    font-size: calc(3vw + 3.5em);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
   .copy_left:before {
     content: "";
@@ -283,11 +286,11 @@ a {
   }
 
   .copy_right {
-    top: 87px;
+    top: 54px;
     right: 0;
     opacity: 0;
     -webkit-clip-path: polygon(40% 36%, 87% 41%, 76% 60%, 17% 63%, 8% 44%);
-    clip-path: polygon(40% 36%, 87% 41%, 76% 60%, 17% 63%, 8% 44%);
+    clip-path: polygon(21% 36%, 63% 36%, 86% 39%, 82% 58%, 60% 58%, 31% 62%, 11% 58%, 10% 43%);
   }
 
   .copy_right:before {
@@ -314,6 +317,24 @@ a {
     color: rgba(255, 255, 255, 0.75);
     font-family: impact;
     text-decoration: none;
-    font-size: calc(4vw + 3em);
+    font-size: calc(3vw + 3em);
+  }
+}
+@media (max-width: 374px) {
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: impact;
+    text-decoration: none;
+    font-size: calc(4vw + 2.5em);
+  }
+  .copy > .copy_a {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: impact;
+    text-decoration: none;
+    font-size: calc(4vw + 2.8em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="artist-main-section">
             <div class="text">{{artist.description}}</div>
             <div class="pictureandname">
@@ -7,7 +8,12 @@
             <div class="name-artist">{{artist.artist}}</div>
             </div>
         </div>
-        <div class="stuff">Stuff:</div>
+        <div class="stuff-class">
+            <div class="stuff">Stuff:</div>
+        </div>
+
+
+        
         
         <div class="product-class">
                 <div class="artist-product-item" v-for="product in products">

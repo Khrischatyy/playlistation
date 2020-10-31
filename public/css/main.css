@@ -400,7 +400,7 @@ z-index: 50;
 
 
 .footer {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -711,7 +711,8 @@ z-index: 50;
 }
 
 .artist-item {
-	max-width: 300px;
+	padding: 5px;
+	max-width: 270px;
 }
 
 .artist-name > a {
@@ -724,6 +725,9 @@ z-index: 50;
                  white 0px 0px 0, white 0px 0px 0;
 }
 @media(max-width: 767px) {
+	.artist-item {
+	padding: 0px 3px 0px 3px;
+}
 	.image > a > img {
 	max-width: 200px;
 	filter: grayscale(100%);
@@ -879,41 +883,45 @@ z-index: 50;
 
 .artist-main-section {
 	display: flex;
-	max-width: 1300px;
+	max-width: 1100px;
 	margin: 0px auto;
+	padding: 20px;
+	border-bottom: 1px solid white;
 }
 
 .product-class {
-	border-top: 1px solid white;
 display: flex;
 justify-content: center;
+max-width: 1100px;
+margin: 0 auto;
+padding-bottom: 20px;
 }
 
 .artist-product-item {
 	margin: 20px;
-	padding: 0 50px;
 	display: flex;
 	flex-direction: column;
 }
 
 .artist-image{
-	max-width: 300px;
-	max-height: 300px;
+	max-width: 250px;
+	max-height: 250px;
 }
 
 .artist-product-item > a > img {
-	border-radius: 5px;
-	width: 350px;
-	height: 350px;
+	margin: 5px 40px 15px 40px;
+	border-radius: 4px;
+	width: 270px;
+	height: 230px;
 }
 
 .artist-main-section >.text {
+	padding:90px 40px 0px 0px;
 	color: var(--base-color);
 	font-family: helvetica;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	display: flex;
 	align-items: center;
-
 }
 
 .artist-product-item > a {
@@ -922,15 +930,20 @@ justify-content: center;
 	color: var(--base-color);
 	font-family: var(--base-font-family);
 	text-decoration: none;
-	font-size: 1.7em;
+	font-size: 1.4em;
 	margin-top: 10px;
 
 }
-
-.line {
-	max-width: 1400px;
-
+.stuff-class {
+	max-width: 1100px;
+	margin: 30px auto 0px auto;
 }
+.stuff{
+	color: var(--base-color);
+	font-family: belinda;
+	font-size: 1.7em;
+	}
+
 @media(max-width: 767px){
 	.stuff{
 	color: var(--base-color);
@@ -945,10 +958,7 @@ justify-content: center;
 	max-width: 100%;
 	margin: 20px auto;
 	justify-content: center;
-}
-.line {
-	width: 80%;
-	margin: 5% auto;
+	padding: 0px;
 }
 .artist-main-section >.text {
 	max-width: 500px;
@@ -987,6 +997,7 @@ justify-content: center;
 	flex-direction: column;
 }
 .artist-product-item > a > img {
+	margin: 0px;
 	border-radius: 5px;
 	width: 160px;
 	height: 160px;

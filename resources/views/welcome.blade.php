@@ -17,11 +17,7 @@
             <a href="{{ route('artists') }}">CHOOSE ARTIST</a>
         </div>
         <div class="copy copy_left">
-            <span class="copy_a">
-                <span class="hide-left-link">CHOOSE ARTIST</span>
-                <span class="left-link">CHOOSE</span>
-                <span class="left-link">ARTIST</span>
-            </span>
+            <span class="copy_a">CHOOSE ARTIST</span>
         </div>
         <div class="main-line">
             <hr>
@@ -32,6 +28,7 @@
         <div class="copy copy_right">
           <span class="copy_a">SEE ALL</span>
         </div>
+        <div class="main-text">Dude this is not for sale</div>
     </section>
     <script src="{{ asset('js/preloader.js') }}"></script>
 </body>
