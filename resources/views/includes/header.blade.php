@@ -2,7 +2,7 @@
 	<section class="header_container">
 		<div class="header_body">
 			<div class="header_logo">
-				<a href="{{ route('main') }}"><img src="{{ asset('images/logo.jpg') }}"></a>
+				<a href="{{ route('main') }}"><img src="{{ asset('images/logo_illustration_x4.jpg') }}"></a>
 			</div>
 			<div class="header_mobile_menu">
 				<ul class="header_mobile_list">
@@ -25,10 +25,10 @@
 					<li class="header_link search">
 						<div class="search-content">
 							<input id="search" type="text" name="test" autocomplete="off" placeholder="Find a musician...">
-							<div class="search-list"></div>
+							<div class="search-list" style="color: white;"></div>
 						</div>
 						<div class="search-image">
-							<img class="img-header" src="{{ asset('images/search.svg') }}">
+							<img class="img-header" src="{{ asset('images/magnifying-glass.svg') }}">
 						</div>
 					</li>
 					<li class="header_link">
@@ -63,4 +63,26 @@
 		</div>
 	</section> 
 </header>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="{{ asset('js/header.js') }}"></script>
+<script>
+$(document).ready(function() {
+	fetch_customer_data();
+	function fetch_customer_data(query = '')
+	{
+		$.ajax({
+			url:"{{route('search')}}",
+			type:'get',
+			data:{query:query},
+			success:function(data) {
+				let name =  JSON.parse(data)
+			$('.search-list').html(name.name);
+		}
+		});
+	}
+		$(document).on('keyup','#search',function () {
+			var query = $(this).val();
+			fetch_customer_data(query);
+		});
+	});
+</script>

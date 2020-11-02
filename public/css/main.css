@@ -69,7 +69,7 @@ body{
 /******************************************HEADER*******************************************/
 .img-header{
 	cursor: pointer;
-	max-width: 30px;
+	max-width: 27px;
 	filter: brightness(85%);
 	float: right;
 }
@@ -217,16 +217,22 @@ z-index: 50;
 
 }
 @media (max-width: 767px){
+	.img-header{
+		cursor: pointer;
+		max-width: 27px;
+		filter: brightness(85%);
+		float: right;
+	}
 	.header_list li{
 		list-style: none;
-		margin-left: 22px;
+		margin-left: 23px;
 
 	}
 	.search > .search-content {
 		display: none;
 		position: absolute;
 		left: -59px;
-		top: 13px;
+		top: 17px;
 	}
 	.search:hover > .search-content > #search  {
 		width: 109px;
@@ -277,7 +283,7 @@ z-index: 50;
 	.header_burger{
 	display: block;
 	position: relative;
-	width: 25px;
+	width: 23px;
 	height: 18px;
 	position: relative;
 	z-index: 3;
@@ -352,6 +358,7 @@ z-index: 50;
 
 }
 .header_list{
+	padding-top: 5px;
 	margin-right: 10px;
 	display: flex;
 	position: relative;
@@ -386,12 +393,96 @@ z-index: 50;
 	font-family: var(--base-font-family);
 	color: rgba(255,255,255,1);
 	text-decoration: none;
-	font-size: var(--base-font-size);
+	font-size: 25px;
 }
 .span-header {
 	font-size: 17px;
 }
+@media (max-width: 413px){
+	.header_list li{
+		list-style: none;
+		margin-left: 28px;
 
+	}
+	.img-header{
+		max-width: 26px;
+	}
+	.img-header:hover{
+		max-width: 26px;
+
+	}
+	.search > .search-content {
+		left: -41px;
+		top: 17px;
+	}
+	.header_burger{
+	width: 23px;
+	height: 18px;
+	}
+
+}
+@media (max-width: 376px){
+	.search:hover > .search-content > #search  {
+		width: 95px;
+		font-size: 11px;
+	}
+	.header_list{
+		padding-top: 8px;
+	}
+	.header_list li{
+		list-style: none;
+		margin-left: 24px;
+
+	}
+	.img-header{
+		max-width: 28px;
+	}
+	.img-header:hover{
+		max-width: 30px;
+
+	}
+	.search > .search-content {
+		left: -30px;
+		top: 25px;
+		font-size: 10px;
+	}
+	.header_burger{
+	width: 23px;
+	height: 18px;
+	}
+
+}
+@media (max-width: 330px){
+	.search:hover > .search-content > #search  {
+		width: 80px;
+		font-size: 10px;
+	}
+	.header_list{
+		padding-top: 8px;
+	}
+	.header_list li{
+		list-style: none;
+		margin-left: 24px;
+
+	}
+	.img-header{
+		max-width: 28px;
+	}
+	.img-header:hover{
+		max-width: 30px;
+
+	}
+	.search > .search-content {
+		left: -9px;
+		top: 25px;
+		font-size: 10px;
+	}
+	.header_burger{
+	width: 23px;
+	height: 18px;
+	}
+
+}
 
 /*******************************************************************************************/
 

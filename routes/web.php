@@ -43,6 +43,7 @@ Route::get('/plusbyone{id}','ShoppingBagController@getPlusByOne')->name('plusbyo
 
 Route::get('/removeall{id}','ShoppingBagController@getRemoveAll')->name('RemoveAll');
 
+Route::get('/search/action','ArtistsController@search')->name('search');
 
 Auth::routes();
 
