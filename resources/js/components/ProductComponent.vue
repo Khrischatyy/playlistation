@@ -15,15 +15,9 @@
             <div class="buy-section">
                 <div class="product-name">
                     <p>{{product.name}}</p>
-                    <p>{{product.price}} RUB.</p>
-                    <p>SIZE</p>
+                    <p>{{product.price}} USD</p>
                 </div>
-                <div  class="choose-section">
-                    <div class="radioinput"><label>S</label><input type="radio" name="S"></div>
-                    <div class="radioinput"><label>M</label><input type="radio" name="M"></div>
-                    <div class="radioinput"><label>L</label><input type="radio" name="L"></div>
-                </div>
-                    <div class = "button-shop"><button v-on:click="buy()">BUY</button>
+                    <div class ="button-shop"><button v-on:click="buy()">ADD TO CART</button>
                     </div>
             </div>
             <div class="description-photo-1">
@@ -33,13 +27,18 @@
                 <p>{{product.size}}</p>
             </div>
             <div class="description">
-                <p class="description-item">T-SHIRT CARE</p>
-                <p class="description-item"></p>
+                <p>T-SHIRT CARE</p>
+                <div class="fuckin"><p class="description-item"></p></div>
             </div>
-                <div class="line-shop"><hr></div>
+            <div class="description">
                 <p>ABOUT DELIVERY</p>
-                <div class="line-shop"><hr></div>
+                <div class="fuckin"><p class="description-item"></p></div>
+            </div>
+
+            <div class="description">
                 <p>ABOUT RETURN</p>
+                <div class="fuckin"><p class="description-item"></p></div>
+            </div>
                 </div>
         </section>
     </main>
@@ -50,6 +49,18 @@
         props: [
         'product'
         ],
+        mounted()  {
+            $(document).ready(function() {
+                $('description-item').click(function() {
+                    $('.promoinput-1').toggle(300);
+
+            });
+            $('.wish').click(function() {
+                    $('.promoinput-2').toggle(300);
+
+            });
+            });
+        },
         methods: {
             buy() {
                 let id = this.product.id

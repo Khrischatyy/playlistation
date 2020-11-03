@@ -49,9 +49,9 @@
 		                        	{{Auth::user()->name}}
 		                        	<span class="menu-arrow"></span>
 		                        	<ul class="header-menu-link">
-		                        		<li class="header-menu-link-item"><a href="{{route('PersonalAreaOrders')}}" class="span-header">MY ORDERS</a></li>
-		                        		<li class="header-menu-link-item"><a  href="{{route('PersonalArea')}}" class="span-header">MY ACCOUNT</a></li>
-		                        		<li class="header-menu-link-item"><a href=""  class="span-header">LOG OUT</a></li>
+		                        		<li class="header-menu-link-item"><a href="{{route('personal-area-orders')}}" class="span-header">MY ORDERS</a></li>
+		                        		<li class="header-menu-link-item"><a  href="{{route('personal-area')}}" class="span-header">MY ACCOUNT</a></li>
+		                        		<li class="header-menu-link-item"><a href="{{ route('logout') }}"  class="span-header">LOG OUT</a></li>
 		                        	</ul></div>
 		                    @else
 		                        <div class="login"><a href="{{ url('/login') }}">LOG IN</a></div>

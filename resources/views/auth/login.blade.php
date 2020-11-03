@@ -1,37 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="form-registration">
-        <div class="form-1">
-            <form  action="{{ route('login') }}" method="POST">
-                 {{ csrf_field() }}
-                <div class="registration-1">
-                    <div>DO YOU HAVE AN ACCOUNT? COME IN</div>
-                    <div>LOGIN OR EMAIL :</div>
-                    <div><input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus></div>
-                    <div>PASSWORD : </div>
-                    <div><input id="password" type="password" name="password" required></div>
-                    <div><input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me</div>
-                    <div><button class = "button-auth" type="submit" name="do_signup">SIGN UP</button></div>
-                </div>
-            </form>
-    </div>
-        <div class="form-2">
-            <form action="{{ route('register') }}" method="POST">
-                 {{ csrf_field() }}
-                <div class="registration-2">
-                    <div>REGISTATION</div>
-                    <div>LOGIN :</div>
-                    <div><input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus></div>
-                    <div>E-MAIL : </div>
-                    <div><input id="email" type="email" name="email" value="{{ old('email') }}" required></div>
-                    <div>PASSWORD : </div>
-                    <div><input id="password" type="password" name="password" required></div>
-                    <div>CONFIRM PASSWORD : </div>
-                    <div><input id="password-confirm" type="password" name="password_confirmation" required></div>
-                    <div><button class = "button-auth" type="submit" name="do_signup-1">SEND</button></div>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="container">
+
+
+    <form class="signUp auth-form" action="/register" method="POST">
+       {{ csrf_field() }}
+        <h3>Create Your Account</h3>
+        <p class="text-auth">Just enter your email address</br>
+            and your password for join.
+        </p>
+        <input id="name" type="text" name="name" value="{{ old('name') }}" class="input-auth input-button-auth w100" type="text" placeholder="INSERT YOUR NICKNAME" reqired autocomplete='off' />
+        <input id="email" type="email" name="email" value="{{ old('email') }}" class="input-auth input-button-auth w100" type="email" placeholder="INSERT YOUR E-MAIL" reqired autocomplete='off' />
+        <input id="password" name="password" class="input-auth input-button-auth" type="password" placeholder="INSERT PASSWORD" reqired />
+        <input id="password-confirm" name="password_confirmation" class="input-auth input-button-auth" type="password" placeholder="VERIFY PASSWORD" reqired />
+        <button class="input-button-auth form-btn sx log-in" type="button">Log In</button>
+        <button class="input-button-auth form-btn dx" type="submit" name="do_signup-1">Sign Up</button>
+    </form>
+
+
+    <form class="signIn auth-form" action="{{ route('login') }}" method="POST">
+        {{ csrf_field() }}
+        <h3>Welcome</br>Back </h3>
+        <button class="fb input-button-auth" type="button">Log In With Facebook </button>
+        <p class="text-auth">- or -</p>
+        <input id="email" name="email"  value="{{ old('email') }}" class="input-auth input-button-auth" type="email" placeholder="INSERT YOUR E-MAIL" autocomplete='off' reqired />
+        <input id="password" name="password" class="input-auth input-button-auth" type="password" placeholder="INSERT PASSWORD" reqired />
+        <button class="input-button-auth form-btn sx back" type="button">Back</button>
+        <button class="input-button-auth form-btn dx" type="submit" name="do_signup">Log In</button>
+    </form>
+</div>
 @endsection

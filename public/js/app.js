@@ -2056,9 +2056,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['product'],
+  mounted: function mounted() {
+    $(document).ready(function () {
+      $('description-item').click(function () {
+        $('.promoinput-1').toggle(300);
+      });
+      $('.wish').click(function () {
+        $('.promoinput-2').toggle(300);
+      });
+    });
+  },
   methods: {
     buy: function buy() {
       var id = this.product.id;
@@ -37873,12 +37882,8 @@ var render = function() {
         _c("div", { staticClass: "product-name" }, [
           _c("p", [_vm._v(_vm._s(_vm.product.name))]),
           _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.product.price) + " RUB.")]),
-          _vm._v(" "),
-          _c("p", [_vm._v("SIZE")])
+          _c("p", [_vm._v(_vm._s(_vm.product.price) + " USD")])
         ]),
-        _vm._v(" "),
-        _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "button-shop" }, [
           _c(
@@ -37890,7 +37895,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("BUY")]
+            [_vm._v("ADD TO CART")]
           )
         ])
       ]),
@@ -37905,15 +37910,11 @@ var render = function() {
         _c("p", [_vm._v(_vm._s(_vm.product.size))])
       ]),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _c("p", [_vm._v("ABOUT DELIVERY")]),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _c("p", [_vm._v("ABOUT RETURN")])
+      _vm._m(2)
     ])
   ])
 }
@@ -37922,20 +37923,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "choose-section" }, [
-      _c("div", { staticClass: "radioinput" }, [
-        _c("label", [_vm._v("S")]),
-        _c("input", { attrs: { type: "radio", name: "S" } })
-      ]),
+    return _c("div", { staticClass: "description" }, [
+      _c("p", [_vm._v("T-SHIRT CARE")]),
       _vm._v(" "),
-      _c("div", { staticClass: "radioinput" }, [
-        _c("label", [_vm._v("M")]),
-        _c("input", { attrs: { type: "radio", name: "M" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "radioinput" }, [
-        _c("label", [_vm._v("L")]),
-        _c("input", { attrs: { type: "radio", name: "L" } })
+      _c("div", { staticClass: "fuckin" }, [
+        _c("p", { staticClass: "description-item" })
       ])
     ])
   },
@@ -37944,22 +37936,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "description" }, [
-      _c("p", { staticClass: "description-item" }, [_vm._v("T-SHIRT CARE")]),
+      _c("p", [_vm._v("ABOUT DELIVERY")]),
       _vm._v(" "),
-      _c("p", { staticClass: "description-item" })
+      _c("div", { staticClass: "fuckin" }, [
+        _c("p", { staticClass: "description-item" })
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "line-shop" }, [_c("hr")])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "line-shop" }, [_c("hr")])
+    return _c("div", { staticClass: "description" }, [
+      _c("p", [_vm._v("ABOUT RETURN")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "fuckin" }, [
+        _c("p", { staticClass: "description-item" })
+      ])
+    ])
   }
 ]
 render._withStripped = true

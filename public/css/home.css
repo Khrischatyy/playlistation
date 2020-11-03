@@ -58,7 +58,7 @@ body {
 
 a {
   position: relative;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
   font-family: impact;
   text-decoration: none;
   font-size: calc(4vw + 1.5em);
@@ -110,10 +110,10 @@ a {
   position: relative;
   z-index: 2;
   position: relative;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, .9);
   font-family: impact;
   text-decoration: none;
-  font-size: calc(4vw + 1.5em);
+  font-size: calc(4vw + 1.8em);
 }
 
 .copy_left {
@@ -254,7 +254,7 @@ a {
     clip-path: polygon(46% 36%, 76% 33%, 96% 40%, 90% 59%, 72% 64%, 46% 64%, 25% 64%, 10% 60%, 3% 43%, 19% 35%);
   }
   .copy > .copy_a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, .9);
     font-family: impact;
     text-decoration: none;
     font-size: calc(3.5vw + 3.5em);
@@ -314,7 +314,7 @@ a {
     opacity: 1;
   }
   a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.8);
     font-family: impact;
     text-decoration: none;
     font-size: calc(3vw + 3em);
