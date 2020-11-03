@@ -1488,6 +1488,25 @@ button.form-btn.dx {
 
 
 }
+.cart {
+ 	position: relative;
+
+}
+.cartnumber {
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: impact;
+	border-radius: 10px;
+	color: white;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-color: #A60000;
+	top: 11px;
+	left: 10px;
+}
 .shopping-cart-num {
 
 	display: flex;

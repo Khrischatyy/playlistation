@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div style="position: relative; width: 100%;height: 00%;max-width: 500%; max-height: 500%;">
 <div class="container">
 
 
@@ -29,5 +30,6 @@
         <button class="input-button-auth form-btn sx back" type="button">Back</button>
         <button class="input-button-auth form-btn dx" type="submit" name="do_signup">Log In</button>
     </form>
+</div>
 </div>
 @endsection
