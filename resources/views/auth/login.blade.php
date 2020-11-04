@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="position: relative; width: 100%;height: 00%;max-width: 500%; max-height: 500%;">
+<div style="position: relative; width: 100%;height: 620px;max-width: 100%; max-height: 100%;">
 <div class="container">
 
 
@@ -24,8 +24,8 @@
         {{ csrf_field() }}
         <h3>Welcome</br>Back </h3>
         <button class="fb input-button-auth" type="button">Log In With Facebook </button>
-        <p class="text-auth">- or -</p>
-        <input id="email" name="email"  value="{{ old('email') }}" class="input-auth input-button-auth" type="email" placeholder="INSERT YOUR E-MAIL" autocomplete='off' reqired />
+        <button class="gg input-button-auth" type="button">Log In With Google </button>
+        <input style="margin-top: 15px;" id="email" name="email"  value="{{ old('email') }}" class="input-auth input-button-auth" type="email" placeholder="INSERT YOUR E-MAIL" autocomplete='off' reqired />
         <input id="password" name="password" class="input-auth input-button-auth" type="password" placeholder="INSERT PASSWORD" reqired />
         <button class="input-button-auth form-btn sx back" type="button">Back</button>
         <button class="input-button-auth form-btn dx" type="submit" name="do_signup">Log In</button>

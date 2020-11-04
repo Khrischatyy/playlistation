@@ -1231,7 +1231,7 @@ padding-bottom: 20px;
 .container{
 	position:absolute;
 	width: auto;
-	height:auto;
+	height:80vh;
 	top: calc(50% - 240px);
 	left: calc(50% - 160px);
 }
@@ -1254,7 +1254,7 @@ padding-bottom: 20px;
 	text-transform: uppercase;
 	font-size: 12px;
 	color: rgba(0,0,0,.9);
-	margin-bottom: 40px;
+	margin-bottom: 2em;
 }
 
 
@@ -1289,6 +1289,25 @@ button.fb:hover {
 	background: #fff;
 	color: #3b5998;
 }
+button.gg {
+	border: none;
+	background: #A60000;
+	width: 160px;
+	height: 25px;
+	font-family: 'impact', sans-serif;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 4px;
+	border: 1px solid #A60000;
+	cursor: pointer;
+	margin-bottom: 20px;
+	transition:all 0.3s linear;
+}
+button.gg:hover {
+	background: #fff;
+	color: #A60000;
+}
 
 button.form-btn {
 	position: absolute;
@@ -1316,12 +1335,11 @@ button.form-btn.sx:hover {
 }
 
 button.form-btn.sx.back {
-	background-color: rgba(0, 0, 0, 0.15);
 	transition:all 0.3s linear;
 }
 
 button.form-btn.sx.back:hover {
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: black;
 }
 
 button.form-btn.dx {
@@ -1334,11 +1352,11 @@ button.form-btn.dx {
 .input-auth {
 	border: none;
 	border-bottom: 1px solid black;
-	width: 85%;
+	width: 100%;
 	font-family: 'impact';
 	color: black;
 	text-align: center;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight:100;
 	margin-bottom:25px;
 }

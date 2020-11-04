@@ -72,7 +72,7 @@
 			<div>
 				TOTAL WITHOUT DELIVERY
 			</div>
-			<div>{{$totalPrice}} RUB.</div>
+			<div>{{$totalPrice}} USD</div>
 		</div>
 		<div>
 			<div class="ahead-itemss">
@@ -80,14 +80,14 @@
 						DELIVERY 
 					</div>
 					<div>
-						200 RUB. 
+						5 USD 
 					</div>
 			</div>
 		</div>
 		<div class="ahead-items-1">Moscow,Russia</div>
 		<div class="ahead-items">
 			<div>TOTAL :</div>
-			<div>{{$totalPrice + 200}} RUB.</div>
+			<div>{{$totalPrice + 5}} USD</div>
 		</div>
 		<div class="button-shop-cart">
 			<button>BUY</button>

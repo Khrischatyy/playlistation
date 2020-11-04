@@ -15,11 +15,12 @@
 	</div>
 
 	@include('includes.header')
-	<div id="app">
+	
 	@yield('content')
 	
 		
-	</div>
+	
+	
 	@include('includes.footer')
 	<script src="{{ asset('js/preloader.js') }}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

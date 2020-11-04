@@ -3,5 +3,7 @@
   <title>Product</title>
 @endsection
 @section('content')
+<div id="app">
 	<product-component :product="{{$product}}"></product-component>
+</div>
 @endsection
