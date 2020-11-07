@@ -7,13 +7,16 @@
 			<div class="header_mobile_menu">
 				<ul class="header_mobile_list">
 					<li class="header_mobile_link">
-						<a href="">ACCOUNT</a>
+						<a href="{{ route('login') }}">LOG IN</a>
 					</li>
 					<li class="header_mobile_link">
-						<a href="">ARTISTS</a>
+						<a href="{{ route('personal-area') }}">ACCOUNT</a>
 					</li>
 					<li class="header_mobile_link">
-						<a href="">SHOP</a>
+						<a href="{{ route('artists') }}">ARTISTS</a>
+					</li>
+					<li class="header_mobile_link">
+						<a href="{{ route('products') }}">SHOP</a>
 					</li>
 					<li class="header_mobile_link">
 						<a href="">INFORMATION</a>

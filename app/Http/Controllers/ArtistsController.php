@@ -16,8 +16,6 @@ class ArtistsController extends Controller
             $artists = new Artist();
             $artists = Artist::paginate(5);
             return $artists;
-
-
     }
 
     public function getArtist($id) {

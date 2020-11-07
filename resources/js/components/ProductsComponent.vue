@@ -10,7 +10,7 @@
         <div class="pagination">
           <div class="container-pagination">
             <span>
-                <div class="index-pagination"  v-for="n in pagination.last_page" :key="n" @click.prevent="getProduct('/getproducts?page=' + n)">{{n}}</div>
+                <div class="index-pagination"  v-for="n in pagination.last_page" :key="n" @click.prevent="getProduct('/getproducts?page=' + n, n)">{{n}}</div>
             </span>
             <svg viewBox="0 0 100 100">
               <path
@@ -29,41 +29,33 @@
     export default {
         data: function () {
           return {
+            number: -1,
             products : [],
             pagination: {},
           }
         },
         mounted() {
             this.getProduct()
-            
         },
         methods: {
-            transition () {
-                const c = document.querySelector('.container-pagination')
-                const indexs = Array.from(document.querySelectorAll('.index-pagination'))
-                let cur = -1
-                indexs.forEach((index, i) => {
-                  index.addEventListener('click', (e) => {
-                    // clear
-                    c.className = 'container-pagination'
-                    void c.offsetWidth; // Reflow
-                    c.classList.add('open')
-                    c.classList.add(`i${i + 1}`)
-                    if (cur > i) {
-                      c.classList.add('flip')
-                    }
-                    cur = i
-                  })
-                })
-            },
-            getProduct(page_url) {
+            getProduct(page_url, num) {
                 page_url = page_url || '/getproducts'
+                let direction = this.number > num
+                this.number = num
                 axios
                     .get(page_url)
                     .then(response => {
                         this.products = response.data.data
                         this.makePagination(response.data)
-                        this.transition()
+
+                        const c = document.querySelector('.container-pagination')
+                        c.className = 'container-pagination'
+                        void c.offsetWidth; // Reflow
+                        c.classList.add('open')
+                        c.classList.add(`i${this.number}`)
+                        if (direction) {
+                          c.classList.add('flip')
+                        } 
                     })
             },
             makePagination(response) {
@@ -77,5 +69,4 @@
         }
     }
 </script>
-
     

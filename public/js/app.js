@@ -1976,9 +1976,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      number: -1,
       artists: [],
       pagination: {}
     };
@@ -1987,37 +1989,27 @@ __webpack_require__.r(__webpack_exports__);
     this.getArtists();
   },
   methods: {
-    transition: function transition() {
-      var c = document.querySelector('.container-pagination');
-      var indexs = Array.from(document.querySelectorAll('.index-pagination'));
-      var cur = -1;
-      indexs.forEach(function (index, i) {
-        index.addEventListener('click', function (e) {
-          // clear
-          c.className = 'container-pagination';
-          void c.offsetWidth; // Reflow
-
-          c.classList.add('open');
-          c.classList.add("i".concat(i + 1));
-
-          if (cur > i) {
-            c.classList.add('flip');
-          }
-
-          cur = i;
-        });
-      });
-    },
-    getArtists: function getArtists(page_url) {
+    getArtists: function getArtists(page_url, num) {
       var _this = this;
 
       page_url = page_url || '/getartists';
+      var direction = this.number > num;
+      this.number = num;
       axios.get(page_url).then(function (response) {
         _this.artists = response.data.data;
 
         _this.makePagination(response.data);
 
-        _this.transition();
+        var c = document.querySelector('.container-pagination');
+        c.className = 'container-pagination';
+        void c.offsetWidth; // Reflow
+
+        c.classList.add('open');
+        c.classList.add("i".concat(_this.number));
+
+        if (direction) {
+          c.classList.add('flip');
+        }
       });
     },
     makePagination: function makePagination(response) {
@@ -2193,6 +2185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      number: -1,
       products: [],
       pagination: {}
     };
@@ -2201,37 +2194,27 @@ __webpack_require__.r(__webpack_exports__);
     this.getProduct();
   },
   methods: {
-    transition: function transition() {
-      var c = document.querySelector('.container-pagination');
-      var indexs = Array.from(document.querySelectorAll('.index-pagination'));
-      var cur = -1;
-      indexs.forEach(function (index, i) {
-        index.addEventListener('click', function (e) {
-          // clear
-          c.className = 'container-pagination';
-          void c.offsetWidth; // Reflow
-
-          c.classList.add('open');
-          c.classList.add("i".concat(i + 1));
-
-          if (cur > i) {
-            c.classList.add('flip');
-          }
-
-          cur = i;
-        });
-      });
-    },
-    getProduct: function getProduct(page_url) {
+    getProduct: function getProduct(page_url, num) {
       var _this = this;
 
       page_url = page_url || '/getproducts';
+      var direction = this.number > num;
+      this.number = num;
       axios.get(page_url).then(function (response) {
         _this.products = response.data.data;
 
         _this.makePagination(response.data);
 
-        _this.transition();
+        var c = document.querySelector('.container-pagination');
+        c.className = 'container-pagination';
+        void c.offsetWidth; // Reflow
+
+        c.classList.add('open');
+        c.classList.add("i".concat(_this.number));
+
+        if (direction) {
+          c.classList.add('flip');
+        }
       });
     },
     makePagination: function makePagination(response) {
@@ -37977,7 +37960,7 @@ var render = function() {
                 on: {
                   click: function($event) {
                     $event.preventDefault()
-                    return _vm.getArtists("/getartists?page=" + n)
+                    return _vm.getArtists("/getartists?page=" + n, n)
                   }
                 }
               },
@@ -38233,7 +38216,7 @@ var render = function() {
                 on: {
                   click: function($event) {
                     $event.preventDefault()
-                    return _vm.getProduct("/getproducts?page=" + n)
+                    return _vm.getProduct("/getproducts?page=" + n, n)
                   }
                 }
               },
