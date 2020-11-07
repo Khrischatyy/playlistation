@@ -34,9 +34,7 @@
 					<li class="header_link">
 						<div class="cart"><a href="{{ route('shopping-bag') }}"><img class="img-header" src="{{ asset('images/shopping-bag.svg') }}"></a>
 						<a href="{{ route('shopping-bag') }}">
-							@if(Session::has('cart'))
-							<div class="cartnumber">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</div>
-							@endif
+								<shopping-bag-count></shopping-bag-count>
 						</a>
 						</div>
 					</li>

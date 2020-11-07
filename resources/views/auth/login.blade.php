@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('login')
 <div style="position: relative; width: 100%;height: 620px;max-width: 100%; max-height: 100%;">
 <div class="container">
 
@@ -32,4 +32,5 @@
     </form>
 </div>
 </div>
+
 @endsection

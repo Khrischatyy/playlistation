@@ -4,6 +4,6 @@
 @endsection
 @section('content')
 <div id="app">
-	<artists-component :artists="{{$artists}}"></artists-component>
+	<artists-component></artists-component>
 </div>
 @endsection

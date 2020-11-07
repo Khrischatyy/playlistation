@@ -9,9 +9,15 @@ use DB;
 class ArtistsController extends Controller
 {
     public function index() {
-	    	$artists = new Artist();
-	    	$artists = Artist::all();
-    	return view('artists',['artists'=>$artists]);
+    	return view('artists');
+    }
+
+    public function getArtists() {
+            $artists = new Artist();
+            $artists = Artist::paginate(5);
+            return $artists;
+
+
     }
 
     public function getArtist($id) {

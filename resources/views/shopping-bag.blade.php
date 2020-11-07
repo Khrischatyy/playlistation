@@ -32,10 +32,12 @@
 						</div>
 				</div>
 				<div class="shopping-cart-i shopping-cart-i-price">
+					<div class="fuck2">
 					{{$product['price']}} $
+					</div>
 				</div>
 				<div class="img-cross shopping-cart-i">
-					<a href="{{route('RemoveAll',['id'=>$product['item']['id']]) }}"><img src="images/Cross-lines (1).png"></a>
+					<div class="fuck"><a href="{{route('RemoveAll',['id'=>$product['item']['id']]) }}"><img src="images/Cross-lines (1).png"></a></div>
 					<div class="shopping-cart-i-price-1">
 					{{$product['price']}} $
 				</div>

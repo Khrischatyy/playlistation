@@ -27,9 +27,13 @@ Route::get('/orders', function () {
 
 Route::get('/products','ProductsController@index')->name('products');
 
+Route::get('/getproducts','ProductsController@getProducts');
+
 Route::get('/product/{id}','ProductsController@getProduct')->name('product/{id}');
 
 Route::get('/artists','ArtistsController@index')->name('artists');
+
+Route::get('/getartists','ArtistsController@getArtists');
 
 Route::get('/artist/{id}','ArtistsController@getArtist')->name('artist/{id}');
 
@@ -48,3 +52,6 @@ Route::get('/search/action','ArtistsController@search')->name('search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/getCountShoppingCart','ShoppingBagController@countShoppingCart');
+

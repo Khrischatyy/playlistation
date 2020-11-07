@@ -15,7 +15,8 @@ class ShoppingBagController extends Controller
         $cart->add($product,$product->id); 
 
         $request->session()->put('cart',$cart);
-        return redirect()->route('products');
+        $count = Session::get('cart')->totalQty;
+        return $count;
     }
     public function getReduceByOne($id) {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
@@ -58,5 +59,9 @@ class ShoppingBagController extends Controller
             Session::forget('cart');
         }
         return redirect()->route('shopping-bag');
+    }
+    public function countShoppingCart() {
+        $count = Session::get('cart')->totalQty;
+        return $count;
     }
 }

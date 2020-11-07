@@ -45,6 +45,7 @@
 </template>
 
 <script>
+
     export default {
         props: [
         'product'
@@ -65,8 +66,10 @@
             buy() {
                 let id = this.product.id
                 axios.get('/add-to-cart/' + id)
-                    .then(() =>{
-                        console.log('Hi its awesome')
+                    .then((response) =>{
+                        console.log(response);
+                        let count = response.data;
+                        this.$store.dispatch('updateUser',{count});
                     })
                     .catch((e) => {
                         console.log(e)

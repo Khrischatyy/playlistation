@@ -4,6 +4,6 @@
 @endsection
 @section('content')
 <div id="app">
-	<products-component :products="{{$products}}"></products-component>
+	<products-component></products-component>
 </div>
 @endsection

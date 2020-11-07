@@ -111,6 +111,7 @@ body{
 	float: right;
 }
 .img-header:hover{
+	transition: 0.1s;
 	max-width: 30px;
 	filter: brightness(120%);
 
@@ -426,6 +427,7 @@ z-index: 50;
 	font-size: var(--base-font-size);
 }
 .login:hover > a {
+	transition: 0.2s;
 	cursor: pointer;
 	font-family: var(--base-font-family);
 	color: rgba(255,255,255,1);
@@ -1477,9 +1479,7 @@ button.form-btn.dx {
 	justify-content: center;
 
 }
-.item-shopping-1 {
-	margin-right: 20px;
-}
+
 .ahead-shopping-cart {
  margin-left: 20px;
  margin-right: 20px;
@@ -1491,11 +1491,19 @@ button.form-btn.dx {
 
 
 }
+.fuck {
+	display: flex;
+	justify-content: center;
+}
+.fuck2 {
+	display: flex;
+	justify-content: center;
+}
 .info-shopping-cart > .shirt > img {
 	max-width: 200px;
 }
-.img-cross > a > img {
-	width: 20px;
+.img-cross > div > a > img {
+	width: 18px;
 }
 
 .shopping-cart-item {
@@ -1737,7 +1745,8 @@ font-size: 9px;
 		display: none;
 	}
 	.shopping-cart-i-price-1 {
-		display: block;
+		display: flex;
+		justify-content: center;
 		margin-bottom: 40px;
 	}
 	.img-cross {
@@ -1754,8 +1763,8 @@ font-size: 9px;
 	font-size: 10px;
 
 }
-.img-cross > a > img {
-	width: 15px;
+.img-cross > div > a > img {
+	width: 13px;
 }
 .shopping-cart-num > .shopping-cart-num-minus {
 	padding: 5px;
@@ -1963,3 +1972,76 @@ font-size: 9px;
 }
 }
 /*******************************************************************************************/
+
+
+/*********************************************PAGINATION**********************************************/
+@import url('https://rsms.me/inter/inter-ui.css');
+.pagination {
+  align-items: center;
+  color: #555;
+  display: flex;
+  font-family: 'Inter UI', sans-serif;
+  font-size: 1.25em;
+  justify-content: center;
+  height: 100px;
+  margin: 0;
+}
+.container-pagination {
+  display: inline-block;
+  position: relative;
+}
+.index-pagination {
+  cursor: pointer;
+  display: inline;
+  margin-right: 30px;
+  padding: 5px;
+  user-select: none;
+  -moz-user-select: none;
+}
+.index-pagination:last-child {
+  margin: 0;
+}
+svg {
+  left: -13px;
+  position: absolute;
+  top: -11px;
+  transition: transform 500ms;
+  width: 46px;
+}
+path {
+  fill:none;
+  stroke:white;
+  stroke-dasharray: 150 150;
+  stroke-width:15;
+}
+.container-pagination.open:not(.flip) path {
+  animation: OpenRight 500ms;
+}
+.container-pagination.open.flip path {
+  animation: OpenLeft 500ms;
+}
+.container-pagination.i1 svg {
+  transform: translateX(0);
+}
+.container-pagination.i2 svg {
+  transform: translateX(50px);
+}
+.container-pagination.i3 svg {
+  transform: translateX(102px);
+}
+.container-pagination.i4 svg {
+  transform: translateX(154px);
+}
+.container-pagination.i5 svg {
+  transform: translateX(206px);
+}
+@keyframes OpenRight {
+  25% { stroke-dasharray: 100 150; }
+  60% { stroke-dasharray: 100 150; }
+  100% { stroke-dasharray: 150 150; }
+}
+@keyframes OpenLeft {
+  25% { stroke-dashoffset: -50px; }
+  60% { stroke-dashoffset: -50px; }
+  100% { stroke-dashoffset: 0; }
+}
