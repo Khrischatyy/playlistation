@@ -2113,15 +2113,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['product'],
   mounted: function mounted() {
     $(document).ready(function () {
-      $('description-item').click(function () {
-        $('.promoinput-1').toggle(300);
+      $('.main-desc-tshirt_1').click(function () {
+        $('.desc-tshirt_1').toggle(300);
       });
-      $('.wish').click(function () {
-        $('.promoinput-2').toggle(300);
+      $('.main-desc-tshirt_2').click(function () {
+        $('.desc-tshirt_2').toggle(300);
+      });
+      $('.main-desc-tshirt_3').click(function () {
+        $('.desc-tshirt_3').toggle(300);
       });
     });
   },
@@ -38123,11 +38135,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "description" }, [
-      _c("p", [_vm._v("T-SHIRT CARE")]),
+    return _c("div", { staticClass: "main-desc-tshirt main-desc-tshirt_1" }, [
+      _c("div", { staticClass: "description" }, [
+        _c("p", [_vm._v("T-SHIRT CARE")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "fuckin" }, [
+          _c("p", { staticClass: "description-item" })
+        ])
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "fuckin" }, [
-        _c("p", { staticClass: "description-item" })
+      _c("div", { staticClass: "desc-tshirt desc-tshirt_1" }, [
+        _vm._v("Close back dude")
       ])
     ])
   },
@@ -38135,11 +38153,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "description" }, [
-      _c("p", [_vm._v("ABOUT DELIVERY")]),
+    return _c("div", { staticClass: "main-desc-tshirt main-desc-tshirt_2" }, [
+      _c("div", { staticClass: "description" }, [
+        _c("p", [_vm._v("ABOUT DELIVERY")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "fuckin" }, [
+          _c("p", { staticClass: "description-item" })
+        ])
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "fuckin" }, [
-        _c("p", { staticClass: "description-item" })
+      _c("div", { staticClass: "desc-tshirt desc-tshirt_2" }, [
+        _vm._v("You did it again")
       ])
     ])
   },
@@ -38147,11 +38171,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "description" }, [
-      _c("p", [_vm._v("ABOUT RETURN")]),
+    return _c("div", { staticClass: "main-desc-tshirt main-desc-tshirt_3" }, [
+      _c("div", { staticClass: "description" }, [
+        _c("p", [_vm._v("ABOUT RETURN")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "fuckin" }, [
+          _c("p", { staticClass: "description-item" })
+        ])
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "fuckin" }, [
-        _c("p", { staticClass: "description-item" })
+      _c("div", { staticClass: "desc-tshirt desc-tshirt_3" }, [
+        _vm._v("Get out of here")
       ])
     ])
   }
@@ -52112,15 +52142,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************!*\
   !*** ./resources/js/components/ProductsComponent.vue ***!
   \*******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductsComponent_vue_vue_type_template_id_5ecce49e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductsComponent.vue?vue&type=template&id=5ecce49e& */ "./resources/js/components/ProductsComponent.vue?vue&type=template&id=5ecce49e&");
 /* harmony import */ var _ProductsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductsComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ProductsComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ProductsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ProductsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -52150,7 +52179,7 @@ component.options.__file = "resources/js/components/ProductsComponent.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/ProductsComponent.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

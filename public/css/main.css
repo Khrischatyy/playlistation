@@ -1119,10 +1119,17 @@ padding-bottom: 20px;
 	display: flex;
 	justify-content: center;
 }
+.desc-tshirt {
+	display: none;
+	padding-bottom: 25px;
+}
+.main-desc-tshirt {
+	border-bottom: 1px solid rgba(255,255,255,0.9);
+
+}
 .description {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid rgba(255,255,255,0.9);
 }
 .button-shop > button {
 	font-size: .9em;
@@ -1177,6 +1184,13 @@ padding-bottom: 20px;
 	border-top: 10px solid #fff;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
+}
+.description-item_2{
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-right: 10px solid #fff;
+	border-bottom: 7px solid transparent;
 }
 
 @media(max-width: 767px) {

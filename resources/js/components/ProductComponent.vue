@@ -26,19 +26,28 @@
                 <p>{{product.color}}</p>
                 <p>{{product.size}}</p>
             </div>
+            <div class="main-desc-tshirt main-desc-tshirt_1">
             <div class="description">
                 <p>T-SHIRT CARE</p>
                 <div class="fuckin"><p class="description-item"></p></div>
             </div>
+            <div class="desc-tshirt desc-tshirt_1">Close back dude</div>
+            </div>
+            <div class="main-desc-tshirt main-desc-tshirt_2">
             <div class="description">
                 <p>ABOUT DELIVERY</p>
                 <div class="fuckin"><p class="description-item"></p></div>
             </div>
-
+            <div class="desc-tshirt desc-tshirt_2">You did it again</div>
+            </div>
+            <div class="main-desc-tshirt main-desc-tshirt_3">
             <div class="description">
                 <p>ABOUT RETURN</p>
                 <div class="fuckin"><p class="description-item"></p></div>
             </div>
+            <div class="desc-tshirt desc-tshirt_3">Get out of here</div>
+            </div>
+
                 </div>
         </section>
     </main>
@@ -51,16 +60,24 @@
         'product'
         ],
         mounted()  {
+
             $(document).ready(function() {
-                $('description-item').click(function() {
-                    $('.promoinput-1').toggle(300);
+                $('.main-desc-tshirt_1').click(function() {
+                    $('.desc-tshirt_1').toggle(300);
 
             });
-            $('.wish').click(function() {
-                    $('.promoinput-2').toggle(300);
+            $('.main-desc-tshirt_2').click(function() {
+                $('.desc-tshirt_2').toggle(300);
+
+            });
+            $('.main-desc-tshirt_3').click(function() {
+                    $('.desc-tshirt_3').toggle(300);
 
             });
             });
+
+
+
         },
         methods: {
             buy() {

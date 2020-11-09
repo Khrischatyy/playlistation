@@ -14,7 +14,7 @@ class ArtistsController extends Controller
 
     public function getArtists() {
             $artists = new Artist();
-            $artists = Artist::paginate(5);
+            $artists = Artist::paginate(12);
             return $artists;
     }
 
