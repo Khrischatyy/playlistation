@@ -501,18 +501,18 @@ z-index: 50;
 	}
 	.header_list li{
 		list-style: none;
-		margin-left: 24px;
+		margin-left: 17px;
 
 	}
 	.img-header{
-		max-width: 28px;
+		max-width: 26px;
 	}
 	.img-header:hover{
-		max-width: 30px;
+		max-width: 28px;
 
 	}
 	.search > .search-content {
-		left: -9px;
+		left: -13px;
 		top: 25px;
 		font-size: 10px;
 	}
@@ -590,9 +590,16 @@ z-index: 50;
 	max-width: 250px;
 }
 @media(max-width: 767px) {
+	.header_container {
+		position: fixed;
+		top: 0;
+		height: 60px;
+		background: black;
+	}
 	.main-content-product {
+
 	width: 100%;
-	margin: 25px auto;
+	margin: 65px auto 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -616,7 +623,6 @@ z-index: 50;
 @media(max-width: 677px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -641,7 +647,6 @@ z-index: 50;
 @media(max-width: 677px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -665,7 +670,6 @@ z-index: 50;
 @media(max-width: 515px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -689,7 +693,6 @@ z-index: 50;
 @media(max-width: 435px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -713,7 +716,6 @@ z-index: 50;
 @media(max-width: 395px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -737,7 +739,6 @@ z-index: 50;
 @media(max-width: 395px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -761,7 +762,6 @@ z-index: 50;
 @media(max-width: 335px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -785,7 +785,6 @@ z-index: 50;
 @media(max-width: 315px) {
 	.main-content-product {
 	max-width: 100%;
-	margin: 25px auto;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -872,6 +871,13 @@ z-index: 50;
 	}
 }
 @media(max-width: 777px) { 
+	.main-content-artist {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 1200px;
+		margin: 65px auto 25px auto;
+	}
 		.image > a > img {
 		max-width: 160px;
 		filter: grayscale(100%)  contrast(112%) brightness(93%);
@@ -1942,6 +1948,7 @@ font-size: 9px;
 		margin-bottom: 30px;
 	}
 	.main-personal {
+		margin-top: 75px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
