@@ -29,6 +29,7 @@
           <span class="copy_a">SEE ALL</span>
         </div>
         <div class="main-text">Dude this is not for sale</div>
+        <div class="main-text-1">Just for a good pic</div>
     </section>
     <script src="{{ asset('js/preloader.js') }}"></script>
 </body>

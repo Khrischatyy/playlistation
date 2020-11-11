@@ -13,7 +13,7 @@ class ProductsController extends Controller
 
         public function getProducts () {
                 $products = new Product();
-                $products = Product::paginate(10);
+                $products = Product::paginate(12);
             return $products;
         }
 

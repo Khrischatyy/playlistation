@@ -188,6 +188,9 @@ a {
 .main-text {
   display: none;
 }
+.main-text-1 {
+  display: none;
+}
 @media (max-width: 767px) {
   .main-text {
     display: block;
@@ -196,6 +199,14 @@ a {
     padding-top: 30px;
     font-family: impact;
     font-size: 20px;
+  }
+  .main-text-1 {
+    display: block;
+    position: relative;
+    color: rgba(255,255,255,0.8);
+    padding-top: 15px;
+    font-family: impact;
+    font-size: 18px;
   }
   .main-line {
     display: block;

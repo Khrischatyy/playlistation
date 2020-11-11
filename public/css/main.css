@@ -704,7 +704,7 @@ z-index: 50;
 	font-family: var(--base-font-family);
 	text-decoration: none;
 	color: var(--base-color);
-	font-size: 1.1em;
+	font-size: 0.9em;
 }
 .product{
 	margin: 10px;
@@ -2048,6 +2048,9 @@ path {
 }
 .container-pagination.i5 svg {
   transform: translateX(206px);
+}
+.container-pagination.i6 svg {
+  transform: translateX(256px);
 }
 @keyframes OpenRight {
   25% { stroke-dasharray: 100 150; }

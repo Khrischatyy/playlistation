@@ -92,7 +92,7 @@
 			<div>{{$totalPrice + 5}} USD</div>
 		</div>
 		<div class="button-shop-cart">
-			<button>BUY</button>
+			<button>CLICK FOR NOTHING</button>
 		</div>
 	</div>
 

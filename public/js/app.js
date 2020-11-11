@@ -37950,9 +37950,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "artist-name" }, [
-            _c("a", { attrs: { href: "/artist/" + artist.id } }, [
-              _vm._v(_vm._s(artist.name))
-            ])
+            _c("a", [_vm._v(_vm._s(artist.name))])
           ])
         ])
       }),
