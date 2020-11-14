@@ -28,7 +28,7 @@
 						<a href="{{ route('products') }}">SHOP</a>
 					</li>
 					<li class="header_mobile_link">
-						<a href="">INFORMATION</a>
+						<a href="/information">INFORMATION</a>
 					</li>
 				</ul>
 			</div>

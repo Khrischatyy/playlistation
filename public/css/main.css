@@ -2071,14 +2071,19 @@ path {
 }
 .information-class {
 	max-width: 1200px;
-	margin: 40px auto 0 auto;
+	margin: 40px auto 40px auto;
 	color: white;
 	font-family: impact;
 	text-align: center;
 }
+.info-text > a { 
+color: #A60000;
+}
 @media(max-width: 767px) {
 	.information-class {
 	padding: 30px;
+	margin: 40px auto 0px auto;
+
 }
 
 }
