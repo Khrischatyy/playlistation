@@ -2077,10 +2077,14 @@ path {
 	text-align: center;
 }
 .info-text > a { 
+	color: white;
+	font-family: impact;
+	text-align: center;
 color: #A60000;
 }
 @media(max-width: 767px) {
 	.information-class {
+
 	padding: 30px;
 	margin: 40px auto 0px auto;
 
