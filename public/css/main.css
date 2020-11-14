@@ -2069,3 +2069,16 @@ path {
   60% { stroke-dashoffset: -50px; }
   100% { stroke-dashoffset: 0; }
 }
+.information-class {
+	max-width: 1200px;
+	margin: 40px auto 0 auto;
+	color: white;
+	font-family: impact;
+	text-align: center;
+}
+@media(max-width: 767px) {
+	.information-class {
+	padding: 30px;
+}
+
+}

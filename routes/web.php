@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('main');
 
+Route::get('/information', function () {
+    return view('information');
+})->name('information');
+
+
 Route::get('/account', function () {
     return view('personal-area');
 })->middleware('auth')->name('personal-area');
