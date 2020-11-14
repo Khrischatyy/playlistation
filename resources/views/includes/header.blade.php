@@ -6,12 +6,21 @@
 			</div>
 			<div class="header_mobile_menu">
 				<ul class="header_mobile_list">
-					<li class="header_mobile_link">
-						<a href="{{ route('login') }}">LOG IN</a>
-					</li>
+				@if (Route::has('login'))
+                    @if (Auth::check())
+
+
 					<li class="header_mobile_link">
 						<a href="{{ route('personal-area') }}">ACCOUNT</a>
 					</li>
+	                @else
+
+					<li class="header_mobile_link">
+						<a href="{{ route('login') }}">LOG IN</a>
+					</li>
+	                    @endif
+          			@endif
+
 					<li class="header_mobile_link">
 						<a href="{{ route('artists') }}">ARTISTS</a>
 					</li>
@@ -56,7 +65,7 @@
 		                        	<ul class="header-menu-link">
 		                        		<li class="header-menu-link-item"><a href="{{route('personal-area-orders')}}" class="span-header">MY ORDERS</a></li>
 		                        		<li class="header-menu-link-item"><a  href="{{route('personal-area')}}" class="span-header">MY ACCOUNT</a></li>
-		                        		<li class="header-menu-link-item"><a href="{{ route('logout') }}"  class="span-header">LOG OUT</a></li>
+		                        		<li class="header-menu-link-item"><a href="/logout"  class="span-header">LOG OUT</a></li>
 		                        	</ul></div>
 		                    @else
 		                        <div class="login"><a href="{{ url('/login') }}">LOG IN</a></div>

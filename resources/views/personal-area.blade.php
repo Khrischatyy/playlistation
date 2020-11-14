@@ -7,7 +7,7 @@
                 <img src="images/user.svg">
             </div>
             <div class="personal-pic-item">
-                ACCOUNT NAME
+            {{Auth::user()->name}}
             </div>
         </div>
         <div class="personal-switch">
@@ -30,7 +30,7 @@
                     NAME:
                 </div>
                 <div class="main-info-item-elem-2">
-                    <input type="text" name="" placeholder="Enter your name:">
+                    <input type="text" name="" placeholder="{{Auth::user()->name}}">
                 </div>
             </div>
             <div class="main-info-item-elem">
@@ -48,7 +48,7 @@
                     EMAIL:
                 </div>
                 <div class="main-info-item-elem-2">
-                    <input type="text" name="" placeholder="Enter your email:">
+                    <input type="text" name="" placeholder="{{Auth::user()->email}}">
                 </div>
             </div>
             <div class="main-info-item-elem">

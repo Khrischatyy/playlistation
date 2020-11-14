@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/account', function () {
     return view('personal-area');
-})->name('personal-area');
+})->middleware('auth')->name('personal-area');
 
 Route::get('/orders', function () {
     return view('personal-area-orders');
